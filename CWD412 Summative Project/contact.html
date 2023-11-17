@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Ryan Weitz - Portfolio</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>Ryan Weitz</h1>
+    <p>Web Developer</p>
+  </header>
+
+  <header class="navbar">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h3>About Me</h3>
+
+  <section id="contact">
+    <h2>Contact Me:</h2>
+    <form id="contact-form" action="Server.php" method="post" onsubmit="return subscribeFormSubmit();">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br>
+
+      <label for="subject">Subject:</label>
+      <select id="subject" name="subject" required>
+          <option value="feedback">Feedback</option>
+          <option value="suggestions">Suggestions</option>
+          <option value="questions">Questions</option>
+          <option value="other">Other</option>
+      </select>
+      
+      <br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
+      <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    function subscribeFormSubmit() {
+        alert("Message sent successfully!");
+        
+        // Reset the form
+        document.getElementById('contact-form').reset();
+        
+        return false;
+    }
+</script>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+<footer>
+
+</footer>
+</html>
